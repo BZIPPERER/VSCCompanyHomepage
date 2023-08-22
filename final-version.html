@@ -1,0 +1,267 @@
+<html>
+<head>
+<title>Stellen für Berufserfahrene</title>
+<script typ="text/javascript">
+var expanded = false;
+
+function showCheckboxes(b) 
+{
+
+  var checkboxes = document.getElementById(b);
+  
+  if (!expanded) 
+  {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } 
+  else 
+  {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
+
+}
+</script>
+<style>
+body
+{
+	background-color:#424632;
+	font-family:arial;
+}
+
+select, p
+{
+	width:230px;
+        font-size:18px;
+	margin-left:35px;
+}
+
+.header-select
+{
+	background-color:lightgreen;
+	height:200px;
+	width:75%;
+	height:270px;
+	margin-left:12%;
+}
+
+/* same dimensions */
+.content-select
+{
+	background-color:white;
+	height:500px;
+	width:75%;
+	
+	margin-left:12%;
+}
+
+h1
+{
+	margin-left:27px;
+}
+
+.dd .link
+{
+	margin-left:27px;
+	color:white;
+	font-weight:bold;
+
+}
+
+
+.multiselect {
+  width: 200px;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes, #chip, #chap {
+  display: none;
+  border: 1px #dadada solid;
+  
+  font-weight: bolder;
+  color:black;
+}
+
+
+/*REGION ----------------------------*/
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
+}
+
+
+#chap label 
+{
+  display: block;
+}
+
+#chap label:hover 
+{
+  background-color: #1e90ff;
+}
+
+#chip label 
+{
+  display: block;
+}
+
+#chip label:hover 
+{
+  background-color: #1e90ff;
+}
+
+
+
+
+/*END REGION ----------------------------*/
+
+
+
+
+
+
+@media only screen and (max-width: 1077px)
+{
+	.dd .imgo
+	{
+		margin-left:10px;
+	}
+	select
+	{
+		width:120px;
+	}
+	p
+	{
+		font-size:13px;
+	}
+	.dd
+	{
+		font-size:13px;
+		display:flex;
+	}
+	a
+	{
+		margin-left:5px;
+	}
+	
+}
+@media only screen and (max-width: 797px)
+{
+
+	.dd
+	{
+		font-size:10px;
+		display:flex;
+	}
+	a
+	{
+		margin-left:5px;
+	}
+}
+</style>
+</head>
+<body>
+ <div class="dd" style="width:100%"><!-- hier rotes Kreislogo -->
+    <img class="imgo" src="./k2.jpg" width="90px" style="margin-left:233px"/>
+        <a href="#" class="link">Unternehmen</a> 
+	<a href="#" class="link">Montagesystem</a> 
+	<a href="#" class="link">Digital Services</a> 
+	<a href="#" class="link">Resource Center</a>
+	<a href="#" class="link">Kontakt</div>  
+    </div>
+<div class="header-select" style="padding-bottom:15px"><br></br><h1>Filter</h1>
+   
+    <div>
+    <div style="float:left;width:30%">
+       <p>Abteilung</p>
+       <form>
+		<div class="multiselect">
+			  <div class="selectBox" onclick="showCheckboxes('chip')">
+					<select>
+					  <option>W&auml;hlen Sie eins</option>
+					</select>
+					<div class="overSelect"></div>
+    				</div>
+    				<div id="chip">
+					  <label for="onechip">
+					  <input type="checkbox" id="onechip" />Alpha</label>
+					<label for="twochips">
+					  <input type="checkbox" id="twochips" />Bravo</label>
+					<label for="threechips">
+					  <input type="checkbox" id="threechips" />Charlie</label>
+					  <label for="fourchips">
+					  <input type="checkbox" id="fourchips" />Delta</label>
+				  </div>
+				</div>
+	   </form>
+    </div>
+       <div style="float:left;width:30%">
+       <p>Standort</p>
+	   <form>
+		<div class="multiselect">
+			  <div class="selectBox" onclick="showCheckboxes('chap')">
+					<select>
+					  <option>W&auml;hlen Sie eins</option>
+					</select>
+					<div class="overSelect"></div>
+    				</div>
+    				<div id="chap">
+						<label for="onechap">
+					  <input type="checkbox" id="onechap" />Renningen</label>
+						<label for="twochap">
+					  <input type="checkbox" id="twochap" />Deutschland</label>
+			
+				  </div>
+				</div>
+	   </form>
+    </div>
+       <div style="float:left;width:30%">
+       <p>Art der Anstellung</p>
+       <form>
+  		<div class="multiselect">
+    			<div class="selectBox" onclick="showCheckboxes('checkboxes')">
+      				<select>
+        				<option>W&auml;hlen Sie eins</option>
+      				</select>
+      				<div class="overSelect"></div>
+    				</div>
+    				<div id="checkboxes">
+      					<label for="one">
+        				<input type="checkbox" id="one" />Studienabgaenger</label>
+     	 				<label for="two">
+        				<input type="checkbox" id="two" />Berufserfahrene</label>
+      					<label for="three">
+        				<input type="checkbox" id="three" />Freelancer</label>
+						<label for="four">
+						<input type="checkbox" id="four" />Praktikante</label>
+    				</div>
+  				</div>
+         </form>
+
+    </div></div>
+</div>
+
+<div class="content-select" style="margin-top:20px;padding-bottom:15px"><br></br><h1>Auswahl aktuell</h1>
+   
+ </div>
+</body>
+</html>
