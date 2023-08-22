@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Stellen für Berufserfahrene</title>
+<title>Jobs for Everyone</title>
 <script typ="text/javascript">
 var expanded = false;
 
@@ -100,14 +100,15 @@ h1
 
 
 /*REGION ----------------------------*/
-#checkboxes label {
+#checkboxes label 
+{
   display: block;
 }
 
-#checkboxes label:hover {
+#checkboxes label:hover 
+{
   background-color: #1e90ff;
 }
-
 
 #chap label 
 {
@@ -128,10 +129,6 @@ h1
 {
   background-color: #1e90ff;
 }
-
-
-
-
 /*END REGION ----------------------------*/
 
 
@@ -164,9 +161,12 @@ h1
 	}
 	
 }
-@media only screen and (max-width: 797px)
+@media only screen and (max-width: 815px)
 {
-
+    select
+	{
+		width:90px;
+	}
 	.dd
 	{
 		font-size:10px;
@@ -182,77 +182,79 @@ h1
 <body>
  <div class="dd" style="width:100%"><!-- hier rotes Kreislogo -->
     <img class="imgo" src="./k2.jpg" width="90px" style="margin-left:233px"/>
-        <a href="#" class="link">Unternehmen</a> 
-	<a href="#" class="link">Montagesystem</a> 
+        <a href="#" class="link">Company</a> 
+	<a href="#" class="link">Building Systems</a> 
 	<a href="#" class="link">Digital Services</a> 
 	<a href="#" class="link">Resource Center</a>
-	<a href="#" class="link">Kontakt</div>  
+	<a href="#" class="link">Contact</div>  
     </div>
 <div class="header-select" style="padding-bottom:15px"><br></br><h1>Filter</h1>
    
     <div>
     <div style="float:left;width:30%">
-       <p>Abteilung</p>
+       <p>Department</p>
        <form>
 		<div class="multiselect">
 			  <div class="selectBox" onclick="showCheckboxes('chip')">
 					<select>
-					  <option>W&auml;hlen Sie eins</option>
+					  <option>Chose one option...</option>
 					</select>
 					<div class="overSelect"></div>
     				</div>
     				<div id="chip">
-					  <label for="onechip">
-					  <input type="checkbox" id="onechip" />Alpha</label>
+					<label for="onechip">
+					  <input type="checkbox" id="onechip" />Logistics</label>
 					<label for="twochips">
-					  <input type="checkbox" id="twochips" />Bravo</label>
+					  <input type="checkbox" id="twochips" />Financial</label>
 					<label for="threechips">
-					  <input type="checkbox" id="threechips" />Charlie</label>
-					  <label for="fourchips">
-					  <input type="checkbox" id="fourchips" />Delta</label>
+					  <input type="checkbox" id="threechips" />Delivery</label>
+					<label for="fourchips">
+					  <input type="checkbox" id="fourchips" />Busines Processes</label>
 				  </div>
 				</div>
 	   </form>
     </div>
        <div style="float:left;width:30%">
-       <p>Standort</p>
+       <p>Location</p>
 	   <form>
 		<div class="multiselect">
 			  <div class="selectBox" onclick="showCheckboxes('chap')">
 					<select>
-					  <option>W&auml;hlen Sie eins</option>
+						<option>Chose one option...</option>
 					</select>
 					<div class="overSelect"></div>
     				</div>
     				<div id="chap">
 						<label for="onechap">
-					  <input type="checkbox" id="onechap" />Renningen</label>
+					  <input type="checkbox" id="onechap" />London</label>
 						<label for="twochap">
-					  <input type="checkbox" id="twochap" />Deutschland</label>
-			
+					  <input type="checkbox" id="twochap" />Munich</label>
+						<label for="threechap">
+					 <input type="checkbox" id="threechap" />Canberra</label>
+						</label>	
 				  </div>
 				</div>
 	   </form>
     </div>
        <div style="float:left;width:30%">
-       <p>Art der Anstellung</p>
+       <p>Kind of engagement</p>
        <form>
   		<div class="multiselect">
     			<div class="selectBox" onclick="showCheckboxes('checkboxes')">
       				<select>
-        				<option>W&auml;hlen Sie eins</option>
+        				<option>Chose one option...</option>
       				</select>
       				<div class="overSelect"></div>
     				</div>
     				<div id="checkboxes">
       					<label for="one">
-        				<input type="checkbox" id="one" />Studienabgaenger</label>
+        				<input type="checkbox" id="one" />Students</label>
      	 				<label for="two">
-        				<input type="checkbox" id="two" />Berufserfahrene</label>
+        				<input type="checkbox" id="two" />Professionals</label>
       					<label for="three">
         				<input type="checkbox" id="three" />Freelancer</label>
 						<label for="four">
-						<input type="checkbox" id="four" />Praktikante</label>
+						<input type="checkbox" id="four" />Apprenticeship</label>
     				</div>
   				</div>
          </form>
@@ -260,7 +262,7 @@ h1
     </div></div>
 </div>
 
-<div class="content-select" style="margin-top:20px;padding-bottom:15px"><br></br><h1>Auswahl aktuell</h1>
+<div class="content-select" style="margin-top:20px;padding-bottom:15px"><br></br><h1>Selected items:</h1>
    
  </div>
 </body>
